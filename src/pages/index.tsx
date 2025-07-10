@@ -7,6 +7,7 @@ import AboutCravingSection from "../components/AboutCravingSection";
 import MenuSection from "../components/MenuSection";
 import TestimonialsMarquee from "../components/TestimonialsMarquee";
 
+import GallerySection from "../components/GallerySection";
 import FAQSection from "../components/FAQSection";
 import Footer from "../components/Footer";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <AboutCravingSection />
       <MenuSection />
       <TestimonialsMarquee />
+      <GallerySection />
       <FAQSection />
       <Footer />
       {/* <PricingSection /> */}
