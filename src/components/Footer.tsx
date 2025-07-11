@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <footer className="bg-[#151e18] border-t border-[#222e27] pt-12 pb-4 px-4 text-white">
-      <div className="container px-12 mx-auto flex flex-col md:flex-row md:justify-between gap-12 md:gap-6 items-start">
+      <div className="container px-2 sm:px-4 md:px-8 lg:px-12 mx-auto flex flex-col md:flex-row md:justify-between gap-6 md:gap-8 items-start">
         {/* Logo & Social */}
         <div className="flex-1 min-w-[220px]">
           <div className="flex items-center gap-2 mb-4">
@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
       </div>
       <hr className="my-8 border-[#232e27]" />
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 md:gap-4">
         <div className="text-gray-400 text-xs">
           © Copyright 2024, All Rights Reserved by FramerWebPro
         </div>

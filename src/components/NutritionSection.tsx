@@ -52,22 +52,22 @@ export default function NutritionSection() {
   return (
     <section className="pb-20 px-4 bg-white">
       <div className="max-w-3xl mx-auto text-center">
-        <p className="text-[#396042] font-satoshi font-bold uppercase tracking-wider mb-2 text-lg">Who We Are</p>
-        <h2 className="font-forum text-6xl md:text-7xl font-bold text-[#22223B] mb-6 leading-tight">
+        <p className="text-[#396042] font-satoshi font-bold uppercase tracking-wider mb-2 md:text-lg text-sm">Who We Are</p>
+        <h2 className="font-forum text-4xl md:text-7xl font-bold text-[#22223B] mb-8 md:mb-6 leading-tight">
           Prioritize Nutrition for<br />Optimal Health
         </h2>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-6">
+        <div className="flex flex-col md:flex-row justify-center md:items-center md:gap-8 gap-3 mb-6">
           {features.map((f, i) => (
-            <div key={i} className="flex flex-col items-center">
+            <div key={i} className="flex flex-row md:flex-col items-center gap-2">
               {f.icon}
-              <span className="mt-2 font-satoshi font-bold text-lg text-[#22223B]">{f.title}</span>
+              <span className="md:mt-2 font-satoshi font-bold text-lg text-[#22223B]">{f.title}</span>
             </div>
           ))}
         </div>
         <p className="text-gray-500 text-base md:text-lg mb-10">
           Discover the key to vibrant living with our guide on prioritizing nutrition for optimal health. Explore expert tips and insights to nourish your body and elevate your well-being today!
         </p>
-        <div className="bg-[#fcfcf7] rounded-2xl p-8 flex flex-col md:flex-row gap-8 justify-center items-center">
+        <div className="bg-[#fcfcf7] rounded-2xl p-8 flex flex-col md:flex-row gap-8 justify-center md:items-center">
           {services.map((col, i) => (
             <ul key={i} className="flex-1 space-y-4 text-left">
               {col.map((item, j) => (

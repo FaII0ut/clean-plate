@@ -25,12 +25,12 @@ const FAQS = [
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(0);
   return (
-    <section className="py-32 px-4 bg-[#151e18] text-white">
-      <div className="container px-12 mx-auto flex flex-col md:flex-row gap-14 md:gap-24 items-start">
+    <section className="py-32 bg-[#151e18] text-white">
+      <div className="container px-4 md:px-12 mx-auto flex flex-col md:flex-row gap-14 md:gap-24 items-start">
         {/* Left */}
-        <div className="md:w-1/3 w-full mb-8 md:mb-0">
+        <div className="md:w-1/3 w-full">
           <span className="inline-block bg-[#232e27] text-gray-200 rounded-full px-4 py-1 text-xs mb-4 font-satoshi">FAQ</span>
-          <h2 className="font-forum text-6xl font-semibold mb-4 leading-tight">Frequently asked questions</h2>
+          <h2 className="font-forum text-4xl md:text-5xl font-semibold mb-4 leading-tight">Frequently asked questions</h2>
           <p className="text-gray-400 text-sm max-w-xs">Discover solutions to the most common queries.</p>
         </div>
         {/* Right */}

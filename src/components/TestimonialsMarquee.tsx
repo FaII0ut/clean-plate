@@ -6,8 +6,8 @@ import TestimonialCard from "./TestimonialCard";
 export default function TestimonialsMarquee() {
   return (
     <section className="py-24 bg-white">
-      <div className="max-w-5xl mx-auto text-center mb-12">
-        <h2 className="font-forum text-5xl font-semibold text-[#22223B] mb-4">
+      <div className="max-w-5xl text-center mb-12 mx-auto container md:px-12 px-4">
+        <h2 className="font-forum text-4xl md:text-5xl font-semibold text-[#22223B] mb-4">
           What Our Customers Say
         </h2>
         <p className="text-gray-500 text-lg max-w-2xl mx-auto">

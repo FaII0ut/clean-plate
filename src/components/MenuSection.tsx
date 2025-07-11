@@ -7,7 +7,7 @@ const MENU_ITEMS = [
     price: "$18.99",
     type: "nonveg",
     category: "nonveg",
-    image: "/img/hero.jpg",
+    image: "/img/menu1.heic",
     tag: "Non-Veg",
     description:
       "Tender and slow-cooked to perfection, our BBQ Grilled Ribs are glazed with a smoky sweet barbecue.",
@@ -17,7 +17,7 @@ const MENU_ITEMS = [
     price: "$4.75",
     type: "drinks",
     category: "drinks",
-    image: "/img/hero.jpg",
+    image: "/img/menu2.heic",
     tag: "Drinks",
     description:
       "This classic mocktail blends fresh mint, lime juice, and soda for a cool, bubbly, and refreshing drink.",
@@ -27,7 +27,7 @@ const MENU_ITEMS = [
     price: "$4.25",
     type: "drinks",
     category: "drinks",
-    image: "/img/hero.jpg",
+    image: "/img/menu3.webp",
     tag: "Drinks",
     description:
       "A tropical delight, the Pineapple Coconut Fizz combo sweet pineapple juice with creamy coconut.",
@@ -42,10 +42,10 @@ export default function MenuSection() {
       : MENU_ITEMS.filter((item) => item.category === selected || item.type === selected);
 
   return (
-    <section className="py-28 px-4 bg-white">
+    <section className="py-28 mx-auto container md:px-12 px-4 bg-white">
       <div className="max-w-4xl mx-auto text-center mb-10">
-        <h2 className="font-forum text-5xl font-semibold text-[#22223B] mb-4">Explore Our Menu</h2>
-        <p className="text-gray-500 text-lg max-w-2xl mx-auto mb-6">
+        <h2 className="font-forum text-4xl font-semibold text-[#22223B] mb-4">Explore Our Menu</h2>
+        <p className="text-gray-500 text-base md:text-lg max-w-2xl mx-auto mb-6">
           Experience a symphony of flavors with our carefully curated menu.<br />
           Each dish is designed to delight your senses and leave.
         </p>
@@ -54,7 +54,7 @@ export default function MenuSection() {
         {filtered.map((item) => (
           <div
             key={item.name}
-            className="bg-[#faf9f7] rounded-3xl p-6 flex flex-col items-center w-full max-w-[390px] min-w-[390px] border border-[#f3f3f3]"
+            className="bg-[#faf9f7] rounded-3xl p-6 flex flex-col items-center w-full md:max-w-[390px] md:min-w-[390px] border border-[#f3f3f3]"
           >
             <div className="w-full mb-4">
               <img
