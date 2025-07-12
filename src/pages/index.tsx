@@ -1,5 +1,4 @@
 
-import Header from "../components/Header";
 import Hero from "../components/Hero";
 import StatsSection from "../components/StatsSection";
 import NutritionSection from "../components/NutritionSection";
@@ -9,7 +8,6 @@ import TestimonialsMarquee from "../components/TestimonialsMarquee";
 
 import GallerySection from "../components/GallerySection";
 import FAQSection from "../components/FAQSection";
-import Footer from "../components/Footer";
 
 export default function Home() {
   return (

@@ -7,11 +7,10 @@ import MenuCard from "@/components/MenuCard";
 interface MenuItemProps {
   name: string;
   price: string;
-  image: string;
   description: string;
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({name, image}) => {
+const MenuItem: React.FC<MenuItemProps> = ({name}) => {
   return (
     <>
       <div className="flex flex-row mx-auto container px-12 gap-x-3 mt-6">
@@ -49,7 +48,7 @@ const MenuItem: React.FC<MenuItemProps> = ({name, image}) => {
           <div className="flex-1 w-full h-full relative">
             <img
               src="/img/menu1.heic"
-              alt={name}s
+              alt={name}
               className="w-full h-full object-cover rounded-2xl"
             />
             <div className="absolute bottom-0 right-0 w-full h-full flex items-end justify-end">
