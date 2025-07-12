@@ -14,7 +14,6 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <>
-      <Header />
       <Hero />
       <StatsSection />
       <NutritionSection />
@@ -23,7 +22,6 @@ export default function Home() {
       <TestimonialsMarquee />
       <GallerySection />
       <FAQSection />
-      <Footer />
       {/* <PricingSection /> */}
       {/* <div>
         <p className="font-satoshi text-5xl">Home</p>
