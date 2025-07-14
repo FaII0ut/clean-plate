@@ -82,7 +82,7 @@ export default function GallerySection() {
               alt="Gallery image 4"
               className="rounded-2xl w-full h-full object-cover"
               width={400}
-              height={208} priority
+              height={208}
               priority={false}
             />
           </div>
