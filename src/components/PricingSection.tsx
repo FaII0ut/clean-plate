@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Button from "./Button";
 
 const plans = [
@@ -28,18 +29,22 @@ const plans = [
 
 export default function PricingSection() {
   return (
-    <section className="py-32 px-4 bg-white relative overflow-hidden">
+    <section className="py-32 px-4 bg-[#f9f5e9] relative overflow-hidden w-full">
       {/* Radial gradient background */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[420px] md:w-[900px] md:h-[520px] rounded-full"
         style={{
-          background: "radial-gradient(ellipse at center, #c9fbe6 0%, #f8fff9 60%, transparent 100%)",
+          background:
+            "radial-gradient(ellipse at center, #c9fbe6 0%, #f8fff9 60%, transparent 100%)",
           filter: "blur(24px)",
           zIndex: 0,
         }}
       />
-      <div className="max-w-4xl mx-auto text-center mb-16" style={{position: 'relative', zIndex: 1}}>
+      <div
+        className="max-w-4xl mx-auto text-center mb-16"
+        style={{position: "relative", zIndex: 1}}
+      >
         <h2 className="font-forum text-4xl md:text-5xl font-semibold text-[#22223B] mb-3">
           Pricing
         </h2>
@@ -48,7 +53,10 @@ export default function PricingSection() {
           or go unlimited.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-end gap-8 relative" style={{zIndex: 1}}>
+      <div
+        className="flex flex-col md:flex-row justify-center items-end gap-8 relative"
+        style={{zIndex: 1}}
+      >
         {plans.map((plan, i) => (
           <div
             key={plan.title}
@@ -59,7 +67,9 @@ export default function PricingSection() {
           >
             {i === 1 && (
               <div className="w-full items-center justify-center flex-row mb-5">
-                <p className="w-24 bg-[#3AC98B] mx-auto text-xs px-2 py-1 rounded-full font-satoshi text-center font-medium text-black">Most Popular</p>
+                <p className="w-24 bg-[#3AC98B] mx-auto text-xs px-2 py-1 rounded-full font-satoshi text-center font-medium text-black">
+                  Most Popular
+                </p>
               </div>
             )}
             <div className="bg-zinc-50 w-full flex-1 flex flex-col justify-center items-center rounded-2xl">
@@ -77,10 +87,17 @@ export default function PricingSection() {
           </div>
         ))}
       </div>
-      <div className="flex justify-center mt-12" style={{zIndex: 1, position: 'relative'}}>
-        <Button className="bg-[#3AC98B] hover:bg-[#2ea46e] text-white px-8 py-3 rounded-full text-lg font-satoshi shadow-md transition-all duration-200">
-          Book a class
-        </Button>
+      <div
+        className="flex justify-center mt-12"
+        style={{zIndex: 1, position: "relative"}}
+      >
+        <Link href="/create-plan" passHref legacyBehavior>
+          <a>
+            <Button className="bg-[#3AC98B] hover:bg-[#2ea46e] text-white px-8 py-3 rounded-full text-lg font-satoshi shadow-md transition-all duration-200">
+              Subscribe
+            </Button>
+          </a>
+        </Link>
       </div>
     </section>
   );

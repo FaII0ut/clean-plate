@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Button from "./Button";
 
 const galleryImages = [
@@ -46,20 +47,26 @@ export default function GallerySection() {
             </Button>
           </div>
           <div className="object-cover flex flex-row h-full w-full">
-            <img
+            <Image
               src={galleryImages[1]}
-              alt="Gallery 2"
-              className="rounded-2xl object-cover w-full h-full"
+              alt="Gallery image 2"
+              className="rounded-2xl w-full h-52 object-cover"
+              width={400}
+              height={208}
+              priority={false}
             />
           </div>
         </div>
         {/* Center - Main Images */}
         <div className="sm:col-span-2 md:col-span-2 flex flex-col gap-3 sm:gap-4 md:gap-6">
           <div className="object-cover flex flex-row h-full w-full">
-            <img
+            <Image
               src={galleryImages[0]}
-              alt="Gallery 1"
-              className="rounded-2xl object-cover w-full h-full"
+              alt="Gallery image 1"
+              className="rounded-2xl w-full h-52 object-cover"
+              width={400}
+              height={208}
+              priority={true}
             />
           </div>
 
@@ -78,17 +85,23 @@ export default function GallerySection() {
         </div>
         <div className="sm:col-span-2 md:col-span-4 hidden md:flex flex-col gap-3 sm:gap-4 md:gap-6">
           <div className="object-cover flex flex-row h-full w-full">
-            <img
+            <Image
               src={galleryImages[2]}
-              alt="Gallery 3"
-              className="rounded-2xl object-cover w-full h-full"
+              alt="Gallery image 3"
+              className="rounded-2xl w-full h-52 object-cover"
+              width={400}
+              height={208}
+              priority={false}
             />
           </div>
           <div className="object-cover flex flex-row h-full w-full">
-            <img
+            <Image
               src={galleryImages[3]}
-              alt="Gallery 4"
-              className="rounded-2xl object-cover w-full h-full"
+              alt="Gallery image 4"
+              className="rounded-2xl w-full h-52 object-cover"
+              width={400}
+              height={208}
+              priority={false}
             />
           </div>
         </div>

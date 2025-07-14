@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import Head from "next/head";
-import MenuFilterBar from "../../components/MenuFilterBar";
 import MenuCard from "../../components/MenuCard";
+import {menu} from "../../data/menu";
+import Link from "next/link";
 
 function MenuHeroBanner() {
   return (
@@ -18,8 +19,6 @@ function MenuHeroBanner() {
 }
 
 export default function MenuPage() {
-  const [selected, setSelected] = useState("sunday");
-
   return (
     <>
       <Head>
@@ -30,44 +29,27 @@ export default function MenuPage() {
         />
       </Head>
       <main className="bg-white min-h-screen pt-4 pb-16">
-        {/* <div
-          aria-hidden="true"
-          style={{
-            position: "absolute",
-            inset: 0,
-           flex: 1,
-            backgroundImage: "url('/img/pattern.png')",
-            backgroundRepeat: "repeat",
-            backgroundSize: "auto",
-            opacity: 0.3,
-            zIndex: 0,
-            pointerEvents: "none",
-          }}
-        /> */}
         <div className="relative -top-32 bg-[#25382c] pt-12">
           <MenuHeroBanner />
         </div>
-        <div className="relative -top-24">
-          <MenuFilterBar selected={selected} onSelect={setSelected} />
-        </div>
-        <div className="container mx-auto px-4 md:px-12 mt-2">
-          <div className="flex flex-row border-b border-[#f3f3f3] pb-4 justify-between items-end">
-            <p className="text-5xl font-forum font-bold">203 Menu items</p>
-            <p className="text-gray-500 text-xl font-satoshi">Hight to low</p>
-          </div>
-        </div>
-        <div className="container mx-auto px-4 md:px-12 mt-8">
-          <div className="grid grid-cols-4  justify-center items-stretch gap-6">
-            {Array.from({length: 15}).map((_, i) => (
+        <div className="container mx-auto px-4 md:px-12 mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+          {menu.map((item, i) => (
+            <Link
+              key={i}
+              href={`/menu/${item.slug}`}
+              style={{display: "block"}}
+            >
               <MenuCard
-                key={i}
-                name={`Sample Dish ${i + 1}`}
-                price="$9.99"
-                image="/img/menu1.heic"
-                description="A delicious sample menu item for demonstration purposes."
+                name={item.name}
+                price={item.price}
+                image={item.img}
+                description={
+                  "A delicious sample menu item for demonstration purposes."
+                }
+                slug={item.slug}
               />
-            ))}
-          </div>
+            </Link>
+          ))}
         </div>
       </main>
     </>

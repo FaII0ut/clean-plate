@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export interface Testimonial {
   name: string;
@@ -51,10 +52,13 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
       “{testimonial.text}”
     </p>
     <div className="flex items-center gap-3 mt-auto">
-      <img
+      <Image
         src={testimonial.avatar}
         alt={testimonial.name}
-        className="w-10 h-10 rounded-full object-cover border-2 border-white shadow"
+        className="rounded-full w-16 h-16 object-cover border-2 border-[#eb7147] shadow-md"
+        width={64}
+        height={64}
+        priority={true}
       />
       <div className="text-left">
         <div className="font-satoshi font-bold text-black text-base leading-tight">

@@ -3,16 +3,18 @@ import React, {useState} from "react";
 const MENU_ITEMS = [
   {
     name: "BBQ Grilled Ribs",
+    slug: "bbq-grilled-ribs",
     price: "$18.99",
     type: "nonveg",
     category: "nonveg",
     image: "/img/menu1.heic",
     tag: "Non-Veg",
     description:
-      "Tender and slow-cooked to perfection, our BBQ Grilled Ribs are glazed with a smoky sweet barbecue.",
+      "Tender and slow-cooked to perfection, our BBQ Grilled Ribs are glazed with a smoky sweet.",
   },
   {
     name: "Classic Mojito",
+    slug: "classic-mojito",
     price: "$4.75",
     type: "drinks",
     category: "drinks",
@@ -23,6 +25,7 @@ const MENU_ITEMS = [
   },
   {
     name: "Coconut drinks Fizz",
+    slug: "coconut-drinks-fizz",
     price: "$4.25",
     type: "drinks",
     category: "drinks",
@@ -34,6 +37,7 @@ const MENU_ITEMS = [
 ];
 
 import MenuCard from "./MenuCard";
+import Link from "next/link";
 
 export default function MenuSection() {
   const [selected] = useState("all");
@@ -58,13 +62,19 @@ export default function MenuSection() {
       </div>
       <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch">
         {filtered.map((item) => (
-          <MenuCard
+          <Link
             key={item.name}
-            name={item.name}
-            price={item.price}
-            image={item.image}
-            description={item.description}
-          />
+            href={`/menu/${item.slug}`}
+            style={{display: "block"}}
+          >
+            <MenuCard
+              name={item.name}
+              price={item.price}
+              image={item.image}
+              description={item.description}
+              slug={item.slug}
+            />
+          </Link>
         ))}
       </div>
     </section>
