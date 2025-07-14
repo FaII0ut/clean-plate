@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Button from "./Button";
+
 
 const galleryImages = [
   "/img/gallary.heic",
@@ -82,7 +82,7 @@ export default function GallerySection() {
               alt="Gallery image 4"
               className="rounded-2xl w-full h-full object-cover"
               width={400}
-              height={208}
+              height={208} priority
               priority={false}
             />
           </div>
