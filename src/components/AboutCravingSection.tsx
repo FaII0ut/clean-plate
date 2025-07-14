@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Button from "./Button";
 
 export default function AboutCravingSection() {
@@ -8,13 +7,10 @@ export default function AboutCravingSection() {
       <div className="container md:px-12 px-4 mx-auto flex flex-col md:flex-row items-center justify-center md:gap-12">
         {/* Left image */}
         <div className="flex-shrink-0 relative md:-top-32 -top-12">
-          <Image
+          <img
             src="/img/chef.webp"
-            alt="Chef portrait"
-            className="w-full h-full object-cover rounded-2xl"
-            width={400}
-            height={400}
-            priority={true}
+            alt="Hero image"
+            className="w-[236px] h-[366px]  object-cover rounded-full shadow-lg"
           />
         </div>
         {/* Center content */}
@@ -38,13 +34,10 @@ export default function AboutCravingSection() {
         </div>
         {/* Right image */}
         <div className="flex-shrink-0 relative -bottom-32 md:flex hidden">
-          <Image
+          <img
             src="/img/hero.jpg"
-            alt="Restaurant interior"
-            className="w-full h-full object-cover rounded-2xl"
-            width={400}
-            height={400}
-            priority={true}
+            alt="Chef smiling"
+            className="w-[236px] h-[366px]  object-cover rounded-full shadow-lg"
           />
         </div>
       </div>

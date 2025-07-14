@@ -28,29 +28,11 @@ export default function GallerySection() {
               oasis.
             </p>
           </div>
-          <div className="hidden md:block">
-            <Button
-              href="#"
-              className="flex items-center gap-2 border-2 border-[#eb7147] text-[#eb7147] bg-white px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-full text-sm sm:text-base md:text-lg font-satoshi shadow-md transition-all duration-200"
-            >
-              <span className="mr-2">View Gallery</span>
-              <svg width="22" height="22" fill="none" viewBox="0 0 22 22">
-                <circle cx="11" cy="11" r="10.5" stroke="#eb7147" />
-                <path
-                  d="M8 11h6m0 0l-2-2m2 2l-2 2"
-                  stroke="#eb7147"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </Button>
-          </div>
-          <div className="object-cover flex flex-row h-full w-full">
+          <div className="object-cover flex flex-row h-[500px] w-full relative">
             <Image
               src={galleryImages[1]}
               alt="Gallery image 2"
-              className="rounded-2xl w-full h-52 object-cover"
+              className="rounded-2xl w-full h-full object-cover"
               width={400}
               height={208}
               priority={false}
@@ -59,11 +41,11 @@ export default function GallerySection() {
         </div>
         {/* Center - Main Images */}
         <div className="sm:col-span-2 md:col-span-2 flex flex-col gap-3 sm:gap-4 md:gap-6">
-          <div className="object-cover flex flex-row h-full w-full">
+          <div className="object-cover flex flex-row h-[450px] w-full">
             <Image
               src={galleryImages[0]}
               alt="Gallery image 1"
-              className="rounded-2xl w-full h-52 object-cover"
+              className="rounded-2xl w-full h-full object-cover"
               width={400}
               height={208}
               priority={true}
@@ -84,21 +66,21 @@ export default function GallerySection() {
           </div>
         </div>
         <div className="sm:col-span-2 md:col-span-4 hidden md:flex flex-col gap-3 sm:gap-4 md:gap-6">
-          <div className="object-cover flex flex-row h-full w-full">
+          <div className="object-cover flex flex-row h-[370px] w-full">
             <Image
               src={galleryImages[2]}
               alt="Gallery image 3"
-              className="rounded-2xl w-full h-52 object-cover"
+              className="rounded-2xl w-full h-full object-cover"
               width={400}
               height={208}
               priority={false}
             />
-          </div>
-          <div className="object-cover flex flex-row h-full w-full">
+          </div>  
+          <div className="object-cover flex flex-row h-[370px] w-full">
             <Image
               src={galleryImages[3]}
               alt="Gallery image 4"
-              className="rounded-2xl w-full h-52 object-cover"
+              className="rounded-2xl w-full h-full object-cover"
               width={400}
               height={208}
               priority={false}

@@ -1,12 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "./Button";
+import MobileNavDropdown from "./MobileNavDropdown";
 import {DynamicIcon} from "lucide-react/dynamic";
-import {useStoreActions, Actions} from "easy-peasy";
-import {StoreModel} from "../store/models/index";
+import {useStoreActions} from "@/store/hooks";
+import {StoreModel} from "@/store/models";
+import {Actions} from "easy-peasy";
 
 export default function Header() {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const setShowCartModal = useStoreActions(
     (actions: Actions<StoreModel>) => actions.global.setShowCartModal
   );
@@ -67,20 +70,40 @@ export default function Header() {
         </nav>
         {/* Hamburger menu for mobile */}
         <div className="md:hidden flex items-center">
-          <button className="p-2 focus:outline-none" aria-label="Open Menu">
-            <svg
-              className="w-7 h-7 text-[#22223B]"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
+          <button
+            className="p-2 focus:outline-none"
+            aria-label={mobileNavOpen ? "Close Menu" : "Open Menu"}
+            onClick={() => setMobileNavOpen((v) => !v)}
+          >
+            {mobileNavOpen ? (
+              <svg
+                className="w-7 h-7 text-[#22223B]"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="w-7 h-7 text-[#22223B]"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
           </button>
         </div>
         <div className="hidden sm:flex flex-row py-0 my-0 items-center gap-2">
@@ -104,7 +127,14 @@ export default function Header() {
             </span>
           </div>
         </div>
+        {/* Mobile Nav: expands header down */}
       </header>
+      {typeof window !== "undefined" && (
+        <MobileNavDropdown
+          open={mobileNavOpen}
+          onClose={() => setMobileNavOpen(false)}
+        />
+      )}
     </div>
   );
 }

@@ -28,7 +28,7 @@ const CartModal: React.FC = () => {
         />
       )}
       <div
-        className={`fixed top-0 right-0 max-h-screen h-full w-[600px] p-4 z-[52] transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 max-h-screen h-full w-[600px] p-4 z-[52] transform transition-transform duration-700 ease-in-out ${
           showCartModal ? "translate-x-0" : "translate-x-full"
         }`}
         aria-modal="true"
