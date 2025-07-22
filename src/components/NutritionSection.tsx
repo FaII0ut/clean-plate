@@ -52,7 +52,7 @@ export default function NutritionSection() {
   return (
     <section className="pb-20 px-4 bg-white">
       <div className="max-w-3xl mx-auto text-center">
-        <p className="text-[#396042] font-satoshi font-bold uppercase tracking-wider mb-2 md:text-lg text-sm">Who We Are</p>
+        <p className="text-[#1f3040] font-satoshi font-bold uppercase tracking-wider mb-2 md:text-lg text-sm">Who We Are</p>
         <h2 className="font-forum text-4xl md:text-7xl font-bold text-[#22223B] mb-8 md:mb-6 leading-tight">
           Prioritize Nutrition for<br />Optimal Health
         </h2>
@@ -71,7 +71,7 @@ export default function NutritionSection() {
           {services.map((col, i) => (
             <ul key={i} className="flex-1 space-y-4 text-left">
               {col.map((item, j) => (
-                <li key={j} className="flex items-center gap-2 text-[#396042] text-lg font-satoshi">
+                <li key={j} className="flex items-center gap-2 text-[#1f3040] text-lg font-satoshi">
                   <svg width="20" height="20" fill="none" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#c7e7b2" opacity="0.4"/><path d="M6 10.5l2 2 5-5" stroke="#B5D98C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                   {item}
                 </li>

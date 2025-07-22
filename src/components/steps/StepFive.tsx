@@ -52,8 +52,8 @@ const StepFive: React.FC = () => (
         <p className="font-satoshi font-semibold text-sm text-left w-full text-gray-400">
           7770012 01200012012
         </p>
-        <div className="absolute right-4 w-10 h-10 flex items-center justify-center cursor-pointer bg-[#eb7147]/10 rounded-xl">
-          <DynamicIcon name="copy" size={20} color="#eb7147" />
+        <div className="absolute right-4 w-10 h-10 flex items-center justify-center cursor-pointer bg-[#e36d4e]/10 rounded-xl">
+          <DynamicIcon name="copy" size={20} color="#e36d4e" />
         </div>
       </div>
     </div>

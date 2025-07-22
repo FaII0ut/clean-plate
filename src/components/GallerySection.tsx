@@ -53,13 +53,13 @@ export default function GallerySection() {
           </div>
 
           <div className="bg-[#e8f3e8] rounded-2xl flex flex-col items-center justify-center py-4 sm:py-6 md:py-8 px-2 sm:px-3 md:px-4">
-            <span className="text-5xl md:text-4xl font-bold text-[#396042] font-forum">
+            <span className="text-5xl md:text-4xl font-bold text-[#1f3040] font-forum">
               10
             </span>
             <span className="text-gray-500 mt-2 text-xs sm:text-sm md:text-base">Exclusive Albums</span>
           </div>
           <div className="bg-[#f6f6f6] rounded-2xl flex flex-col items-center justify-center py-4 sm:py-6 md:py-8 px-2 sm:px-3 md:px-4">
-            <span className="text-5xl md:text-4xl font-bold text-[#396042] font-forum">
+            <span className="text-5xl md:text-4xl font-bold text-[#1f3040] font-forum">
               200+
             </span>
             <span className="text-gray-500 mt-2 text-xs sm:text-sm md:text-base">Photo Samples</span>

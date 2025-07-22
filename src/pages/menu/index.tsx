@@ -43,11 +43,8 @@ export default function MenuPage() {
                 name={item.name}
                 price={item.price}
                 image={item.img}
-                description={
-                  "A delicious sample menu item for demonstration purposes."
-                }
-                slug={item.slug}
-              />
+                description={"A delicious sample menu item for demonstration purposes."}
+                slug={item.slug} calories={0} protein={0} carbs={0} fat={0}              />
             </Link>
           ))}
         </div>

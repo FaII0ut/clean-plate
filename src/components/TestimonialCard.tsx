@@ -55,7 +55,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
       <Image
         src={testimonial.avatar}
         alt={testimonial.name}
-        className="rounded-full w-16 h-16 object-cover border-2 border-[#eb7147] shadow-md"
+        className="rounded-full w-16 h-16 object-cover border-2 border-primary shadow-md"
         width={64}
         height={64}
         priority={true}

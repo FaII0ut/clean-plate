@@ -101,20 +101,20 @@ const ReviewsSection: React.FC = () => {
                   <div className="flex flex-row mt-1 items-center">
                     <DynamicIcon
                       name="star"
-                      stroke="#eb7147"
-                      fill="#eb7147"
+                      stroke="#e36d4e"
+                      fill="#e36d4e"
                       size={18}
                     />
                     <DynamicIcon
                       name="star"
-                      stroke="#eb7147"
-                      fill="#eb7147"
+                      stroke="#e36d4e"
+                      fill="#e36d4e"
                       size={18}
                     />
                     <DynamicIcon
                       name="star"
-                      stroke="#eb7147"
-                      fill="#eb7147"
+                      stroke="#e36d4e"
+                      fill="#e36d4e"
                       size={18}
                     />
                     <DynamicIcon

@@ -39,7 +39,7 @@ const StepFour: React.FC = () => {
             <p
               key={item}
               className={`font-satoshi font-semibold text-sm ${
-                index < 4 ? "bg-[#396042] text-white" : "bg-gray-200"
+                index < 4 ? "bg-[#1f3040] text-white" : "bg-gray-200"
               } px-4 py-1.5 rounded-full`}
             >
               {item}
@@ -55,7 +55,7 @@ const StepFour: React.FC = () => {
             <p
               key={item}
               className={`font-satoshi font-semibold text-sm ${
-                index < 4 ? "bg-[#396042] text-white" : "bg-gray-200"
+                index < 4 ? "bg-[#1f3040] text-white" : "bg-gray-200"
               } px-4 py-1.5 rounded-full`}
             >
               {item}

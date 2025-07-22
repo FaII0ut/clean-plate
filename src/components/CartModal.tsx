@@ -62,7 +62,7 @@ const CartModal: React.FC = () => {
               <span className="font-forum text-2xl font-bold">$1200</span>
             </div>
             <Button
-              className="w-full py-2 rounded-xl bg-[#396042] text-white text-2xl font-satoshi font-bold"
+              className="w-full py-2 rounded-xl bg-[#1f3040] text-white text-2xl font-satoshi font-bold"
               onClick={() => router.push("/checkout")}
             >
               Checkout

@@ -20,11 +20,17 @@ export default function MenuItemPage({item}: {item: (typeof menu)[0]}) {
   return (
     <>
       <div className="flex flex-row mx-auto container px-12 gap-x-3 mt-6">
-        <p className="font-satoshi font-semibold text-sm text-[#747474]">Home</p>
+        <p className="font-satoshi font-semibold text-sm text-[#747474]">
+          Home
+        </p>
         <p className="font-satoshi font-semibold text-sm text-[#747474]">/</p>
-        <p className="font-satoshi font-semibold text-sm text-[#747474]">Menu</p>
+        <p className="font-satoshi font-semibold text-sm text-[#747474]">
+          Menu
+        </p>
         <p className="font-satoshi font-semibold text-sm text-[#747474]">/</p>
-        <p className="font-satoshi font-semibold text-sm text-[#747474]">{item.name}</p>
+        <p className="font-satoshi font-semibold text-sm text-[#747474]">
+          {item.name}
+        </p>
       </div>
       <div className="mx-auto container md:px-12 px-4 flex lg:flex-row flex-col w-full gap-x-8 mt-6">
         <div className="flex min-w-1/2 h-[60vh] flex-row gap-3">
@@ -49,22 +55,38 @@ export default function MenuItemPage({item}: {item: (typeof menu)[0]}) {
               className="w-full h-full object-cover rounded-2xl"
             />
             <div className="absolute bottom-0 right-0 w-full h-full flex items-end justify-end">
-              <div className="flex flex-row gap-x-10 bg-[#eb7147] w-min rounded-2xl px-4 py-2 m-3">
+              <div className="flex flex-row gap-x-10 bg-[#e36d4e] w-min rounded-2xl px-4 py-2 m-3">
                 <div className="flex flex-col">
-                  <p className="text-white lg:text-3xl text-2xl font-satoshi font-bold">{item.calories}</p>
-                  <p className="text-white text-sm md:text-base max-w-md font-satoshi font-semibold">Calories</p>
+                  <p className="text-white lg:text-3xl text-2xl font-satoshi font-bold">
+                    {item.calories}
+                  </p>
+                  <p className="text-white text-sm md:text-base max-w-md font-satoshi font-semibold">
+                    Calories
+                  </p>
                 </div>
                 <div className="flex flex-col">
-                  <p className="text-white lg:text-3xl text-2xl font-satoshi font-bold">{item.carbs}</p>
-                  <p className="text-white text-sm md:text-base max-w-md font-satoshi font-semibold">Carbs</p>
+                  <p className="text-white lg:text-3xl text-2xl font-satoshi font-bold">
+                    {item.carbs}
+                  </p>
+                  <p className="text-white text-sm md:text-base max-w-md font-satoshi font-semibold">
+                    Carbs
+                  </p>
                 </div>
                 <div className="flex flex-col">
-                  <p className="text-white lg:text-3xl text-2xl font-satoshi font-bold">{item.protein}</p>
-                  <p className="text-white text-sm md:text-base max-w-md font-satoshi font-semibold">Protein</p>
+                  <p className="text-white lg:text-3xl text-2xl font-satoshi font-bold">
+                    {item.protein}
+                  </p>
+                  <p className="text-white text-sm md:text-base max-w-md font-satoshi font-semibold">
+                    Protein
+                  </p>
                 </div>
                 <div className="flex flex-col">
-                  <p className="text-white lg:text-3xl text-2xl font-satoshi font-bold">{item.fat}</p>
-                  <p className="text-white text-sm md:text-base max-w-md font-satoshi font-semibold">Fat</p>
+                  <p className="text-white lg:text-3xl text-2xl font-satoshi font-bold">
+                    {item.fat}
+                  </p>
+                  <p className="text-white text-sm md:text-base max-w-md font-satoshi font-semibold">
+                    Fat
+                  </p>
                 </div>
               </div>
             </div>
@@ -78,14 +100,16 @@ export default function MenuItemPage({item}: {item: (typeof menu)[0]}) {
               <DynamicIcon name="drumstick" stroke="gray" size={20} />
             </div>
           </div>
-          <h2 className="font-forum text-5xl font-semibold text-[#22223B]">{item.name}</h2>
+          <h2 className="font-forum text-5xl font-semibold text-[#22223B]">
+            {item.name}
+          </h2>
           <div className="flex flex-row gap-x-2">
             {[...Array(5)].map((_, idx) => (
               <DynamicIcon
                 key={idx}
                 name="star"
-                stroke="#eb7147"
-                fill={idx < item.stars ? "#eb7147" : "gray"}
+                stroke="#e36d4e"
+                fill={idx < item.stars ? "#e36d4e" : "gray"}
                 opacity={idx < item.stars ? 1 : 0.2}
                 size={24}
               />
@@ -101,7 +125,7 @@ export default function MenuItemPage({item}: {item: (typeof menu)[0]}) {
           <div className="flex-col mt-4">
             <p className="font-satoshi font-semibold text-sm">ADDONS</p>
             <div className="flex gap-2 mt-2">
-              <div className="flex px-4 py-2 bg-[#396042] rounded-xl">
+              <div className="flex px-4 py-2 bg-[#1f3040] rounded-xl">
                 <p className="font-satoshi font-semibold text-white text-xs lg:text-sm">
                   PROTEIN PLUS
                 </p>
@@ -122,23 +146,35 @@ export default function MenuItemPage({item}: {item: (typeof menu)[0]}) {
             QUANTITY
           </p>
           <div className="flex flex-row border border-black/30 rounded-xl w-min overflow-hidden">
-            <div className="w-12 h-12 flex items-center justify-center text-base hover:bg-[#396042] hover:text-white cursor-pointer">
+            <div className="w-12 h-12 flex items-center justify-center text-base hover:bg-[#1f3040] hover:text-white cursor-pointer">
               -
             </div>
             <div className="w-12 h-12 flex items-center justify-center text-base ">
               1
             </div>
-            <div className="w-12 h-12 flex items-center justify-center text-base hover:bg-[#396042] hover:text-white cursor-pointer">
+            <div className="w-12 h-12 flex items-center justify-center text-base hover:bg-[#1f3040] hover:text-white cursor-pointer">
               +
             </div>
           </div>
-          <Button
-            onClick={() => setShowCartModal(true)}
-            className="flex items-center gap-2 w-full justify-center mt-24"
-            variant="primary"
-          >
-            Add to cart
-          </Button>
+          <div className="hidden sm:flex flex-row py-0 my-0 items-center gap-2 mt-24">
+            <Button
+              onClick={() => setShowCartModal(true)}
+              className="flex items-center gap-2 w-full justify-center "
+              variant="primary"
+            >
+              Add to cart
+            </Button>
+            <div className="relative cursor-pointer">
+              <button
+                className="w-12 h-12 rounded-full bg-[#e7e7e7] flex items-center justify-center focus:outline-none"
+                aria-label="Open cart"
+                onClick={() => setShowCartModal(true)}
+              >
+                <DynamicIcon name="heart" color="gray" size={20} />
+              </button>
+             
+            </div>
+          </div>
         </div>
       </div>
       <ReviewsSection />
@@ -155,8 +191,7 @@ export default function MenuItemPage({item}: {item: (typeof menu)[0]}) {
               price={menu[i].price}
               image={menu[i].img}
               description={menu[i].description}
-              slug={menu[i].slug}
-            />
+              slug={menu[i].slug} calories={0} protein={0} carbs={0} fat={0}            />
           ))}
         </div>
       </div>

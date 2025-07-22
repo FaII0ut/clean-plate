@@ -23,8 +23,8 @@ export default function Button(props: ButtonProps) {
     "text-white px-6 py-3 rounded-full font-satoshi font-semibold text-base transition-colors focus:outline-none focus:ring-2";
   const color =
     variant === "secondary"
-      ? "bg-[#eb7147] hover:bg-[#d95f37] focus:ring-[#eb7147]/60"
-      : "bg-[#396042] hover:bg-[#2d4c33] focus:ring-[#396042]/60";
+      ? "bg-[#e36d4e] hover:bg-[#d95f37] focus:ring-[#e36d4e]/60"
+      : "bg-[#1f3040] hover:bg-[#11202f] focus:ring-[#1f3040]/60";
   const allClasses = `${base} ${color} ${className}`;
 
   if (href) {

@@ -26,8 +26,8 @@ const StepThree: React.FC = () => {
               key={item.fullDate}
               className={`flex flex-col ${
                 index < 1
-                  ? "bg-[#396042] text-white"
-                  : "hover:bg-[#396042]/20 bg-gray-100"
+                  ? "bg-[#1f3040] text-white"
+                  : "hover:bg-[#1f3040]/20 bg-gray-100"
               } p-2 rounded-xl px-6 py-6 items-center`}
             >
               <p className="font-forum font-bold text-5xl text-inherit">
@@ -52,8 +52,7 @@ const StepThree: React.FC = () => {
                 image={item.img}
                 description={item.description}
                 slug={item.slug}
-                showButton={false}
-              />
+                showButton={false} calories={0} protein={0} carbs={0} fat={0}              />
             ))}
             <div
               onClick={openModal}
@@ -140,8 +139,7 @@ const StepThree: React.FC = () => {
                 image={item.img}
                 description={item.description}
                 slug={item.slug}
-                showButton={false}
-              />
+                showButton={false} calories={0} protein={0} carbs={0} fat={0}              />
             ))}
           </div>
         </div>

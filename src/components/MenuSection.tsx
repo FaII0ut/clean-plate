@@ -1,55 +1,17 @@
-import React, {useState} from "react";
-
-const MENU_ITEMS = [
-  {
-    name: "BBQ Grilled Ribs",
-    slug: "bbq-grilled-ribs",
-    price: "$18.99",
-    type: "nonveg",
-    category: "nonveg",
-    image: "/img/menu1.heic",
-    tag: "Non-Veg",
-    description:
-      "Tender and slow-cooked to perfection, our BBQ Grilled Ribs are glazed with a smoky sweet.",
-  },
-  {
-    name: "Classic Mojito",
-    slug: "classic-mojito",
-    price: "$4.75",
-    type: "drinks",
-    category: "drinks",
-    image: "/img/menu2.heic",
-    tag: "Drinks",
-    description:
-      "This classic mocktail blends fresh mint, lime juice, and soda for a cool, bubbly, and refreshing drink.",
-  },
-  {
-    name: "Coconut drinks Fizz",
-    slug: "coconut-drinks-fizz",
-    price: "$4.25",
-    type: "drinks",
-    category: "drinks",
-    image: "/img/menu3.webp",
-    tag: "Drinks",
-    description:
-      "A tropical delight, the Pineapple Coconut Fizz combo sweet pineapple juice with creamy coconut.",
-  },
-];
+import React from "react";
 
 import MenuCard from "./MenuCard";
 import Link from "next/link";
+import {menu} from "@/data/menu";
 
 export default function MenuSection() {
-  const [selected] = useState("all");
-  const filtered =
-    selected === "all"
-      ? MENU_ITEMS
-      : MENU_ITEMS.filter(
-          (item) => item.category === selected || item.type === selected
-        );
+  const filtered = menu.filter((item, index) => index < 8);
 
   return (
-    <section className="py-28 mx-auto container md:px-12 px-4 bg-white">
+    <section
+      id="menu-section"
+      className="py-28 pt-36 mx-auto container md:px-12 px-4 bg-white"
+    >
       <div className="max-w-4xl mx-auto text-center mb-10">
         <h2 className="font-forum text-4xl md:text-6xl font-semibold text-[#22223B] mb-4">
           Explore Our Menu
@@ -60,7 +22,7 @@ export default function MenuSection() {
           Each dish is designed to delight your senses and leave.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-32">
         {filtered.map((item) => (
           <Link
             key={item.name}
@@ -70,9 +32,13 @@ export default function MenuSection() {
             <MenuCard
               name={item.name}
               price={item.price}
-              image={item.image}
+              image={item.img}
               description={item.description}
               slug={item.slug}
+              calories={item.calories}
+              protein={item.protein}
+              carbs={item.carbs}
+              fat={item.fat}
             />
           </Link>
         ))}

@@ -25,9 +25,9 @@ const CartItem: React.FC<CartItemProps> = ({ name, price, img }) => {
       </div>
       <div className="flex flex-row absolute right-0 bottom-4">
         <div className="flex flex-row border border-black/30 rounded-lg w-min overflow-hidden">
-          <div className="w-8 h-8 flex items-center justify-center text-base hover:bg-[#396042] hover:text-white cursor-pointer">-</div>
+          <div className="w-8 h-8 flex items-center justify-center text-base hover:bg-[#1f3040] hover:text-white cursor-pointer">-</div>
           <div className="w-8 h-8 flex items-center justify-center text-base ">1</div>
-          <div className="w-8 h-8 flex items-center justify-center text-base hover:bg-[#396042] hover:text-white cursor-pointer">+</div>
+          <div className="w-8 h-8 flex items-center justify-center text-base hover:bg-[#1f3040] hover:text-white cursor-pointer">+</div>
         </div>
       </div>
     </div>

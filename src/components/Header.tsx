@@ -116,7 +116,7 @@ export default function Header() {
           </Button>
           <div className="relative cursor-pointer">
             <button
-              className="w-12 h-12 rounded-full bg-[#eb7147] flex items-center justify-center focus:outline-none"
+              className="w-12 h-12 rounded-full bg-[#1f3040] flex items-center justify-center focus:outline-none"
               aria-label="Open cart"
               onClick={() => setShowCartModal(true)}
             >

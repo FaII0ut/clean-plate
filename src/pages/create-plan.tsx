@@ -61,9 +61,9 @@ const CreatePlan: NextPageWithLayout = () => {
                   <p
                     className={`w-6 h-6 text-xs font-satoshi font-semibold flex items-center justify-center rounded-full border-2 ${
                       index < currentStep
-                        ? "bg-[#eb7147] text-white border-[#eb7147]"
+                        ? "bg-[#e36d4e] text-white border-[#e36d4e]"
                         : index === currentStep
-                        ? "border-[#eb7147] text-[#eb7147]"
+                        ? "border-[#e36d4e] text-[#e36d4e]"
                         : "border-gray-200 text-gray-400"
                     }`}
                   >

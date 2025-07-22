@@ -23,7 +23,7 @@ export default function Footer() {
                 />
                 <path
                   d="M9 26h18"
-                  stroke="#eb7147"
+                  stroke="#e36d4e"
                   strokeWidth="2"
                   strokeLinecap="round"
                 />
@@ -61,22 +61,22 @@ export default function Footer() {
           </h4>
           <ul className="text-gray-300 text-sm space-y-2">
             <li>
-              <a href="#" className="hover:text-[#eb7147] transition">
+              <a href="#" className="hover:text-[#e36d4e] transition">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#eb7147] transition">
+              <a href="#" className="hover:text-[#e36d4e] transition">
                 About
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#eb7147] transition">
+              <a href="#" className="hover:text-[#e36d4e] transition">
                 Menu
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#eb7147] transition">
+              <a href="#" className="hover:text-[#e36d4e] transition">
                 Contact
               </a>
             </li>
@@ -103,7 +103,7 @@ export default function Footer() {
           {/* Socials */}
           <a
             href="#"
-            className="w-9 h-9 rounded-full border border-[#232e27] flex items-center justify-center text-gray-300 hover:text-[#eb7147] hover:border-[#eb7147] transition"
+            className="w-9 h-9 rounded-full border border-[#232e27] flex items-center justify-center text-gray-300 hover:text-[#e36d4e] hover:border-[#e36d4e] transition"
           >
             <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
               <path
@@ -126,7 +126,7 @@ export default function Footer() {
           </a>
           <a
             href="#"
-            className="w-9 h-9 rounded-full border border-[#232e27] flex items-center justify-center text-gray-300 hover:text-[#eb7147] hover:border-[#eb7147] transition"
+            className="w-9 h-9 rounded-full border border-[#232e27] flex items-center justify-center text-gray-300 hover:text-[#e36d4e] hover:border-[#e36d4e] transition"
           >
             <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
               <circle cx="10" cy="10" r="10" fill="#232e27" />
@@ -144,7 +144,7 @@ export default function Footer() {
           </a>
           <a
             href="#"
-            className="w-9 h-9 rounded-full border border-[#232e27] flex items-center justify-center text-gray-300 hover:text-[#eb7147] hover:border-[#eb7147] transition"
+            className="w-9 h-9 rounded-full border border-[#232e27] flex items-center justify-center text-gray-300 hover:text-[#e36d4e] hover:border-[#e36d4e] transition"
           >
             <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
               <circle cx="10" cy="10" r="10" fill="#232e27" />
@@ -162,7 +162,7 @@ export default function Footer() {
           </a>
           <a
             href="#"
-            className="w-9 h-9 rounded-full border border-[#232e27] flex items-center justify-center text-gray-300 hover:text-[#eb7147] hover:border-[#eb7147] transition"
+            className="w-9 h-9 rounded-full border border-[#232e27] flex items-center justify-center text-gray-300 hover:text-[#e36d4e] hover:border-[#e36d4e] transition"
           >
             <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
               <circle cx="10" cy="10" r="10" fill="#232e27" />
