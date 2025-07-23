@@ -3,10 +3,38 @@ import {plans, Plan} from "@/data/plans";
 import {useStoreState, useStoreActions} from "@/store/hooks";
 
 const StepOne: React.FC = () => {
-  const selectedTab = useStoreState(state => state.plan.selectedTab);
-  const setSelectedTab = useStoreActions(actions => actions.plan.setSelectedTab);
-  const selectedPlanIndex = useStoreState(state => state.plan.selectedPlanIndex);
-  const setSelectedPlanIndex = useStoreActions(actions => actions.plan.setSelectedPlanIndex);
+  const numberOfMeals = useStoreState((state) => state.plan.numberOfMeals);
+  const setNumberOfMeals = useStoreActions(
+    (actions) => actions.plan.setNumberOfMeals
+  );
+  const numberOfDays = useStoreState((state) => state.plan.numberOfDays);
+  const setNumberOfDays = useStoreActions(
+    (actions) => actions.plan.setNumberOfDays
+  );
+  const [mealsInput, setMealsInput] = React.useState<number | "">(
+    numberOfMeals || ""
+  );
+  const [daysInput, setDaysInput] = React.useState<number | "">(
+    numberOfDays || ""
+  );
+
+  // Keep local input in sync with store
+  React.useEffect(() => {
+    setMealsInput(numberOfMeals || "");
+  }, [numberOfMeals]);
+  React.useEffect(() => {
+    setDaysInput(numberOfDays || "");
+  }, [numberOfDays]);
+  const selectedTab = useStoreState((state) => state.plan.selectedTab);
+  const setSelectedTab = useStoreActions(
+    (actions) => actions.plan.setSelectedTab
+  );
+  const selectedPlanIndex = useStoreState(
+    (state) => state.plan.selectedPlanIndex
+  );
+  const setSelectedPlanIndex = useStoreActions(
+    (actions) => actions.plan.setSelectedPlanIndex
+  );
 
   const filteredPlans = plans.filter(
     (plan) =>
@@ -20,10 +48,15 @@ const StepOne: React.FC = () => {
       setSelectedPlanIndex(1 < filteredPlans.length ? 1 : 0);
     }
     // else, preserve user's previous selection
-  }, [selectedTab, setSelectedPlanIndex, filteredPlans.length, selectedPlanIndex]);
+  }, [
+    selectedTab,
+    setSelectedPlanIndex,
+    filteredPlans.length,
+    selectedPlanIndex,
+  ]);
 
   return (
-    <div className="flex flex-col h-[calc(100vh-57px)] overflow-y-auto min-w-[80vw]">
+    <div className="flex flex-col h-[calc(100vh-57px)] overflow-y-auto min-w-[80vw] pt-18 md:pt-46 z-1 w-full md:w-auto">
       <h2 className="text-4xl font-forum font-bold mb-2 text-center mt-12 md:mt-0">
         Choose a Plan
       </h2>
@@ -119,12 +152,54 @@ const StepOne: React.FC = () => {
             onClick={() => setSelectedPlanIndex(0)}
             style={{cursor: "pointer"}}
           >
-            <div className="flex flex-col p-6">
+            <div className="flex flex-col p-6 w-full">
               <p className="text-black text-xl font-satoshi font-semibold mb-3">
                 Custom
               </p>
               <div className="flex flex-row items-end">
-                <p className="text-black text-5xl font-forum font-bold">$$</p>
+                <p className="text-black text-5xl font-forum font-bold">
+                  {numberOfMeals * numberOfDays * 10}$
+                </p>
+              </div>
+              <div className="my-2 gap-x-2 flex flex-col">
+                <p className="text-xs font-satoshi font-bold text-gray-700 mb-1 mt-3">
+                  Number of days
+                </p>
+                <input
+                  className="border rounded-full border-gray-200 px-3 py-2 text-sm font-satoshi w-[130px]"
+                  type="number"
+                  placeholder="Days"
+                  value={daysInput}
+                  min={1}
+                  max={31}
+                  onChange={(e) => {
+                    const value =
+                      e.target.value === ""
+                        ? ""
+                        : Math.max(1, Math.min(31, parseInt(e.target.value)));
+                    setDaysInput(value);
+                    if (value !== "") setNumberOfDays(value);
+                  }}
+                />
+                <p className="text-xs font-satoshi font-bold text-gray-700 mt-3 mb-1">
+                  No of meals per day
+                </p>
+                <input
+                  className="border rounded-full border-gray-200 px-3 py-2 text-sm font-satoshi w-[130px]"
+                  type="number"
+                  placeholder="Meals"
+                  value={mealsInput}
+                  min={1}
+                  max={4}
+                  onChange={(e) => {
+                    const value =
+                      e.target.value === ""
+                        ? ""
+                        : Math.max(1, parseInt(e.target.value));
+                    setMealsInput(value);
+                    if (value !== "") setNumberOfMeals(value);
+                  }}
+                />
               </div>
               <p className="font-satoshi text-sm font-medium text-gray-500 mt-3 pb-2 border-b border-gray-200">
                 Billed before the start of the week

@@ -4,6 +4,7 @@ import Button from "@/components/Button";
 import {DynamicIcon} from "lucide-react/dynamic";
 import StepOne from "@/components/steps/StepOne";
 import StepTwo from "@/components/steps/StepTwo";
+import StepMealTimes from "@/components/steps/StepMealTimes";
 import StepThree from "@/components/steps/StepThree";
 import StepFour from "@/components/steps/StepFour";
 import StepFive from "@/components/steps/StepFive";
@@ -15,17 +16,19 @@ interface NextPageWithLayout extends React.FC {
 const steps = [
   {id: 1, name: "Choose a plan"},
   {id: 2, name: "Add your details"},
-  {id: 3, name: "Pick meals"},
-  {id: 4, name: "Requirements"},
-  {id: 5, name: "Payment"},
+  {id: 3, name: "Meal time slots"}, // NEW
+  {id: 4, name: "Pick meals"},
+  {id: 5, name: "Requirements"},
+  {id: 6, name: "Payment"},
 ];
 
 const stepComponents = [
   <StepOne key={1} />, // Step 1
   <StepTwo key={2} />, // Step 2
-  <StepThree key={3} />, // Step 3
-  <StepFour key={4} />, // Step 4
-  <StepFive key={5} />, // Step 5
+  <StepMealTimes key={3} />, // Step 3 (NEW)
+  <StepThree key={4} />, // Step 4
+  <StepFour key={5} />, // Step 5
+  <StepFive key={6} />, // Step 6
 ];
 
 const CreatePlan: NextPageWithLayout = () => {
@@ -46,7 +49,7 @@ const CreatePlan: NextPageWithLayout = () => {
   return (
     <main className="min-h-screen max-h-screen bg-white relative flex flex-col items-center justify-center py-16 px-4">
       {/* Top Progress Bar */}
-      <div className="w-full h-16 absolute top-0 border-b border-gray-200">
+      <div className="w-full h-16 border-b border-gray-200 fixed top-0 z-10 bg-white">
         <div className="items-center justify-between flex mx-auto container md:px-12 px-4 h-full w-full ">
           <div className="flex items-center gap-2">
             <Image src="/img/logo.png" alt="Clean Plate Logo" className="w-10 h-10" width={40} height={40} priority={true} />
@@ -90,12 +93,10 @@ const CreatePlan: NextPageWithLayout = () => {
       </div>
 
       {/* Step Content */}
-      <div className="flex-1 flex flex-col mt-18 md:mt-46 z-10 w-full md:w-auto">
-        {stepComponents[currentStep]}
-      </div>
+      {stepComponents[currentStep]}
 
       {/* Bottom Bar */}
-      <div className="w-full h-20 absolute bottom-0 border-t border-gray-200 bg-white z-50">
+      <div className="w-full h-20 fixed bottom-0 border-t border-gray-200 bg-white z-10">
         <div className="items-center justify-between flex mx-auto container md:px-12 px-4 h-full w-full">
           {currentStep !== 0 ? (
             <Button

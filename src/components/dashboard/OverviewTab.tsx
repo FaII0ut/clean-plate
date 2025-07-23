@@ -5,7 +5,7 @@ import AttendanceOverview from "@/components/dashboard/AttendanceOverview";
 
 const OverviewTab: React.FC = () => {
   return (
-    <div className="w-full">
+    <div className="flex-1 flex flex-col z-20 w-full mx-auto container px-4 md:px-12 mt-12">
       <div className="flex flex-col">
         <p className="text-gray-600 font-forum font-bold text-4xl">
           My dashboard
@@ -14,7 +14,7 @@ const OverviewTab: React.FC = () => {
           Hello, Ismail Zaid
         </h1>
       </div>
-      <div className="grid grid-cols-4 gap-x-4 mt-12">
+      <div className="grid md:grid-cols-4 grid-cols-2 gap-4 mt-12">
         <div className="border border-gray-200 rounded-2xl p-6">
           <p className="font-satoshi font-medium text-sm text-gray-500">
             Total Calories

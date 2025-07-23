@@ -14,6 +14,11 @@ export interface Meal {
   [key: string]: string | number; // Extend as needed
 }
 
+export interface MealTimeSlot {
+  label: string; // e.g., Breakfast, Lunch
+  time: string;  // e.g., "08:00"
+}
+
 export interface PlanState {
   selectedTab: string; // "Weekly" | "Monthly" | "Custom"
   selectedPlanIndex: number;
@@ -22,6 +27,9 @@ export interface PlanState {
   endDate: string;
   deliveryDays: string[];
   meals: Meal[]; // For Step 3-4, expand as needed
+  numberOfMeals: number; // number of meals in plan
+  numberOfDays: number; // number of days in plan
+  mealTimeSlots: MealTimeSlot[]; // NEW: array of meal time slots
   // Add more fields as needed for Step 4, 5
 }
 
@@ -33,6 +41,9 @@ export interface PlanModel extends PlanState {
   setEndDate: Action<PlanModel, string>;
   setDeliveryDays: Action<PlanModel, string[]>;
   setMeals: Action<PlanModel, Meal[]>;
+  setNumberOfMeals: Action<PlanModel, number>;
+  setNumberOfDays: Action<PlanModel, number>;
+  setMealTimeSlots: Action<PlanModel, MealTimeSlot[]>; // NEW: setter for meal time slots
   resetPlan: Action<PlanModel>;
 }
 
@@ -44,6 +55,9 @@ const plan: PlanModel = {
   endDate: "",
   deliveryDays: [],
   meals: [],
+  numberOfMeals: 0,
+  numberOfDays: 0,
+  mealTimeSlots: [], // NEW: initial value
 
   setSelectedTab: action((state, payload) => {
     state.selectedTab = payload;
@@ -66,6 +80,15 @@ const plan: PlanModel = {
   setMeals: action((state, payload) => {
     state.meals = payload;
   }),
+  setNumberOfMeals: action((state, payload) => {
+    state.numberOfMeals = payload;
+  }),
+  setNumberOfDays: action((state, payload) => {
+    state.numberOfDays = payload;
+  }),
+  setMealTimeSlots: action((state, payload) => {
+    state.mealTimeSlots = payload;
+  }),
   resetPlan: action((state) => {
     state.selectedTab = "Weekly";
     state.selectedPlanIndex = 1;
@@ -74,6 +97,9 @@ const plan: PlanModel = {
     state.endDate = "";
     state.deliveryDays = [];
     state.meals = [];
+    state.numberOfMeals = 0;
+    state.numberOfDays = 0;
+    state.mealTimeSlots = [];
   })
 };
 

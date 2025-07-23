@@ -10,7 +10,7 @@ export default function MenuSection() {
   return (
     <section
       id="menu-section"
-      className="py-28 pt-36 mx-auto container md:px-12 px-4 bg-white"
+      className="py-28 pt-36 mx-auto container md:px-12 px-4 bg-white relative -top-32"
     >
       <div className="max-w-4xl mx-auto text-center mb-10">
         <h2 className="font-forum text-4xl md:text-6xl font-semibold text-[#22223B] mb-4">

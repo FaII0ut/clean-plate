@@ -59,7 +59,7 @@ const StepTwo: React.FC = () => {
   const days = getNext7Days(standardStart);
 
   return (
-    <div className="flex flex-col h-[calc(100vh-57px)]  overflow-y-auto">
+    <div className="flex flex-col h-[calc(100vh-57px)]  overflow-y-auto pt-18 md:pt-46 z-1 w-full md:w-auto">
       <h2 className="text-4xl font-forum font-bold mb-2 text-center mt-12 md:mt-0">
         Customize Your Plan
       </h2>

@@ -21,7 +21,7 @@ const DashboardTabLink: React.FC<{value: string; label: string}> = ({
   const isActive = (page || "overview") === value;
   return (
     <button
-      className={`font-satoshi font-semibold text-base px-4 py-2 rounded-full transition-all duration-150 ${
+      className={`font-satoshi font-semibold md:text-base text-sm md:px-4 px-2 md:py-2 py-1 rounded-full transition-all duration-150 ${
         isActive ? " text-[#e36d4e]" : "text-gray-600"
       }`}
       onClick={() =>
@@ -39,10 +39,7 @@ import OrdersTab from "@/components/dashboard/OrdersTab";
 import OverviewTab from "@/components/dashboard/OverviewTab";
 import SettingsTab from "@/components/dashboard/SettingsTab";
 
-
-const DashboardContent: React.FC<{pageParam: string}> = ({
-  pageParam,
-}) => {
+const DashboardContent: React.FC<{pageParam: string}> = ({pageParam}) => {
   if (pageParam === "orders") {
     return <OrdersTab />;
   }
@@ -54,11 +51,10 @@ const DashboardContent: React.FC<{pageParam: string}> = ({
 };
 
 const Dashboard: React.FC & {noLayout?: boolean} = () => {
-
   return (
     <main className="min-h-screen max-h-screen bg-white relative flex flex-col py-16">
       {/* Top Nav Bar (matches create-plan) */}
-      <div className="w-full h-16 fixed top-0 border-b border-gray-200 bg-white z-50">
+      <div className="w-full h-16 fixed top-0 border-b border-gray-200 bg-white z-30">
         <div className="items-center justify-between flex mx-auto container md:px-12 px-4 h-full w-full ">
           <div className="flex items-center gap-2">
             <Image
@@ -73,7 +69,7 @@ const Dashboard: React.FC & {noLayout?: boolean} = () => {
               Clean plate
             </p> */}
           </div>
-          <div className="flex flex-row gap-6 w-full mx-auto justify-end">
+          <div className="flex flex-row md:gap-6 gap-2 w-full mx-auto justify-end">
             {[
               {label: "Overview", value: "overview"},
               {label: "Orders", value: "orders"},
@@ -100,15 +96,13 @@ const Dashboard: React.FC & {noLayout?: boolean} = () => {
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col z-10 w-full mx-auto container px-12 mt-12">
-        <DashboardContent pageParam={useDashboardPageParam()} />
-      </div>
-
-      <div className="w-full h-20 fixed bottom-0 border-t border-gray-200 bg-white z-50 flex items-center justify-center">
+      <DashboardContent pageParam={useDashboardPageParam()} />
+      <div className="w-full h-20 fixed bottom-0 border-t border-gray-200 bg-white z-20 flex items-center justify-center">
         <div className="font-satoshi text-gray-400 text-sm">
           &copy; {new Date().getFullYear()} Clean Plate
         </div>
       </div>
+      <div className="min-h-[150px] w-full"></div>
     </main>
   );
 };

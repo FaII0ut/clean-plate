@@ -39,15 +39,15 @@ export default function Hero() {
             <Link href="/create-plan" passHref legacyBehavior>
               <a>
                 <Button
-                  className="flex items-center gap-2 mt-2 w-[130px]"
+                  className="flex items-center gap-2 mt-2 w-[170px]"
                   variant="primary"
                 >
-                  Subscribe
+                 Make your plan
                 </Button>
               </a>
             </Link>
             <Button
-              className="flex items-center gap-2 mt-2 w-[130px]"
+              className="flex items-center gap-2 mt-2 w-[160px]"
               variant="secondary"
               onClick={() => {
                 const el = document.getElementById('menu-section');
@@ -56,7 +56,7 @@ export default function Hero() {
                 }
               }}
             >
-              Order now
+              Instant order
             </Button>
           </motion.div>
         </div>
