@@ -65,9 +65,9 @@ const StepOne: React.FC = () => {
         your subscription anytime.
       </p>
       <div className="flex flex-row items-center mt-6 md:mt-12 mx-auto">
-        <div className="border-full rounded-full p-1 gap-x-4 flex flex-row border-2 border-[#eb7147]">
+        <div className="border-full rounded-full p-1 md:gap-x-4 gap-x-2 flex flex-row border-2 border-[#eb7147]">
           <button
-            className={`border-full rounded-full px-8 py-2 font-satoshi font-semibold text-lg transition-all duration-150 focus:outline-none ${
+            className={`border-full rounded-full md:px-8 px-4 md:py-2 py-1 font-satoshi font-semibold md:text-lg text-base transition-all duration-150 focus:outline-none ${
               selectedTab === "Weekly"
                 ? "bg-[#e36d4e] text-white border-[#e36d4e]"
                 : "bg-white text-[#e36d4e]  hover:bg-[#e36d4e]/10"
@@ -78,7 +78,7 @@ const StepOne: React.FC = () => {
             Weekly
           </button>
           <button
-            className={`border-full rounded-full px-8 py-2 font-satoshi font-semibold text-lg transition-all duration-150 focus:outline-none ${
+            className={`border-full rounded-full md:px-8 px-4 md:py-2 py-1 font-satoshi font-semibold md:text-lg text-base transition-all duration-150 focus:outline-none ${
               selectedTab === "Monthly"
                 ? "bg-[#e36d4e] text-white border-[#e36d4e]"
                 : "bg-white text-[#e36d4e]  hover:bg-[#e36d4e]/10"
@@ -90,7 +90,7 @@ const StepOne: React.FC = () => {
           </button>
         </div>
         <button
-          className={`border-full rounded-full px-8 py-2 mx-6 font-satoshi font-semibold text-lg transition-all duration-150 focus:outline-none border-2 ${
+          className={`border-full rounded-full md:px-8 px-4 md:py-2 py-1 md:mx-6 mx-2 font-satoshi font-semibold md:text-lg text-base transition-all duration-150 focus:outline-none border-2 ${
             selectedTab === "Custom"
               ? "bg-[#e36d4e] text-white border-[#e36d4e]"
               : "bg-white text-[#e36d4e] border-[#e36d4e] hover:bg-[#e36d4e]/10"
@@ -220,6 +220,8 @@ const StepOne: React.FC = () => {
           </div>
         )}
       </div>
+      <div className="min-h-[150px] w-full"></div>
+
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Image from "next/image";
 import Button from "@/components/Button";
 import {DynamicIcon} from "lucide-react/dynamic";
@@ -52,7 +52,14 @@ const CreatePlan: NextPageWithLayout = () => {
       <div className="w-full h-16 border-b border-gray-200 fixed top-0 z-10 bg-white">
         <div className="items-center justify-between flex mx-auto container md:px-12 px-4 h-full w-full ">
           <div className="flex items-center gap-2">
-            <Image src="/img/logo.png" alt="Clean Plate Logo" className="w-10 h-10" width={40} height={40} priority={true} />
+            <Image
+              src="/img/logo.png"
+              alt="Clean Plate Logo"
+              className="w-10 h-10"
+              width={40}
+              height={40}
+              priority={true}
+            />
             <p className="font-forum text-2xl font-bold hidden md:flex ">
               Create my plan
             </p>
@@ -87,7 +94,9 @@ const CreatePlan: NextPageWithLayout = () => {
             ))}
           </div>
           <div className="md:hidden flex items-center gap-2">
-            <p className="font-satoshi text-sm font-bold">Step {currentStep + 1} of {steps.length}</p>
+            <p className="font-satoshi text-sm font-bold">
+              Step {currentStep + 1} of {steps.length}
+            </p>
           </div>
         </div>
       </div>
